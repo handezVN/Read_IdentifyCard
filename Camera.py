@@ -16,8 +16,8 @@ def CameraInput(date,room,number):
     directory = str(date)
     urls_path = []
     # Parent Directory path
-    parent_dir = "E:/Test/"
-    sub_dir = parent_dir+directory
+    parent_dir = os.getcwd();
+    sub_dir = parent_dir+"\\"+directory
     # Path
     try:
         path = os.path.join(parent_dir, directory)
@@ -37,8 +37,9 @@ def CameraInput(date,room,number):
     # If image will detected without any error,
     # show result
         if result:
-            url_path = "E:/Test/"+str(date)+"/"+str(room)+"/"+str(i)+".png";
-            cv2.imwrite("E:/Test/"+str(date)+"/"+str(room)+"/"+str(i)+".png", image)
+            url_path = str(parent_dir)+"\\"+str(date)+"\\"+str(room)+"\\"+str(i)+".png";
+            print(url_path)
+            cv2.imwrite(url_path, image)
             urls_path.append(str(url_path));
         else:
             print("No image detected at index "+str(i)+". Please! try again")

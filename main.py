@@ -16,16 +16,16 @@ def print_hi(name):
 if __name__ == '__main__':
     today = date.today()
     print_hi('PyCharm')
-    # urls =  cm.CameraInput(today, 203, 4);
-    urls = [];
-    url1 = "E:/Test/2022-04-21/203/1.png";
-    url2 = "E:/Test/2022-04-21/203/2.png";
-    url3 = "E:/Test/2022-04-21/203/3.png";
-    url4 = "E:/Test/2022-04-21/203/4.png";
-    urls.append(url1)
-    urls.append(url2)
-    urls.append(url3)
-    urls.append(url4)
+    urls =  cm.CameraInput(today, 203, 4);
+    # urls = [];
+    # url1 = "E:/Test/2022-04-21/203/1.png";
+    # url2 = "E:/Test/2022-04-21/203/2.png";
+    # url3 = "E:/Test/2022-04-21/203/3.png";
+    # url4 = "E:/Test/2022-04-21/203/4.png";
+    # urls.append(url1)
+    # urls.append(url2)
+    # urls.append(url3)
+    # urls.append(url4)
     persons = anc.readImg(urls)
     excel.export_Excel(persons,today)
 
